@@ -12,6 +12,7 @@ Django: The web framework used for the backend.
 HTML/CSS: Frontend development for the user interface.
 Bootstrap: Frontend styling and components.
 SQLite: Database management for user and event data.# ClubMAngment.web
+
 This is a club mangment website builted for compitation in CSE_CDEV
 Usage
 Visit the home page to explore club information.
@@ -36,5 +37,4 @@ Run the Development Server:
 
 
 python manage.py runserver
-Access the Application:
-Visit http://localhost:8000 to explore and interact with the application.
+
