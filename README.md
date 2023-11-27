@@ -21,10 +21,6 @@ Add and manage events from the events page.
 Getting Started
 Clone the Repository:
 
-bash
-Copy code
-git clone https://github.com/yourusername/Club-Management-System.git
-Install Dependencies:
 
 
 #how to run
