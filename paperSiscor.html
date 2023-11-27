@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Siscor Rock Game</title>
+
+</head>
+<body>
+    <h1>Paper Siscor Rock game</h1>
+    <div>
+        <button onclick="pickComputerMove('paper')"><img src="paper-emoji (2).png" alt=""></button>
+        <button onclick="pickComputerMove('siscor')"><img src="scissors-emoji.png" alt=""></button>
+        <button onclick="pickComputerMove('rock')"><img src="rock-emoji.png" alt=""></button>
+    </div>
+
+    <script>
+
+        function countResult(){
+            let score = {
+                win:0,
+                loose:0,
+                tie:0
+            }        
+            
+          
+        }
+        let computerMove = '';
+        function playMatch(){
+            let randomNumber = Math.random();
+            
+            if(0<randomNumber<1/3){
+                computerMove = 'paper';
+            }
+            else if(1/3<randomNumber<2/3){
+                computerMove = 'siscor';
+            }
+            else if(randomNumber>2/3){
+                computerMove = 'rock';
+            }
+        }
+        function pickComputerMove(personMove){
+           
+            playMatch();
+            let result = '';
+            if(personMove = 'paper'){
+                if(computerMove === 'paper'){
+                    result = 'tie'
+                }
+                else if(computerMove = 'siscor'){
+                    result = 'you loose'
+                }
+                else if(computerMove === 'rock'){
+                    result = 'you win'
+                }
+            }
+            else if(personMove === 'siscor'){
+                if(computerMove === 'paper'){
+                    result = 'you win'
+                }
+                else if(computerMove === 'siscor'){
+                    reult = 'tie'
+                }
+                else if(computerMove === 'rock'){
+                    result = 'you loose'
+                }
+            }
+            else if(personMove === 'rock'){
+                if(computerMove === 'paper'){
+                    result = 'you loose'
+                }
+                else if(computerMove === 'siscor'){
+                    result = 'you win'
+                }   
+                else if(computerMove === 'rock'){
+                    result = 'tie'
+                }
+            }
+
+            if(result == 'you win'){
+                score.win++;
+            }
+            else if(result == 'you loose'){
+                score.loose++;
+            }
+            else if(reult == 'tie'){
+                score.tie++;
+            }
+
+            alert(`You picked ${personMove} and computer picked ${computerMove} so the reult is ${result}`)
+        }
+    </script>
+   
+</body>
+</html>

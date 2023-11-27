@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="clubManagment.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav>
+    <img src="my new proj/AdamaScienceandTechnologyUniversityASTU-logo.jpg" alt="">
+    <div class="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" id="loginBtn">Login</a></li>
+      </ul>
+      <i id="menu-btn" class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+  </nav>
+
+  <section class="home-page">
+    <h2>Success comes through dedication and hard work</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis cum, nobis earum debitis esse quam facilis eum corporis deserunt voluptas vel quos sequi velit, quasi mollitia blanditiis hic aperiam aut?</p>
+    <div class="btn">
+      <a class="blue" href="#">Learn More</a>
+      <a class="yellow" href="#">Visit Activities</a>
+    </div>
+  </section>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <h1>Member Login</h1>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginError"></p>
+    </div>
+  </div>
+
+  <section class="members-page" id="membersPage">
+    <h1>Manage Members</h1>
+
+    <div class="add-member-form">
+      <h2>Add New Member</h2>
+      <form id="addMemberForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter member's name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter member's email">
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactNumber" placeholder="Enter member's contact number">
+        <label for="membershipStatus">Membership Status:</label>
+        <select id="membershipStatus" name="membershipStatus">
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+        <button type="submit">Add Member</button>
+      </form>
+    </div>
+
+    <div class="members-list">
+      <h2>List of Members</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>Membership Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          </tbody>
+      </table>
+    </div>
+  </section>
+
+  
